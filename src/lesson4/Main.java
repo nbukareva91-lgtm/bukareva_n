@@ -4,18 +4,21 @@ public class Main {
     public static void main(String[] args) {
         Dog dogСhapa = new Dog("Чапа");
         Dog dogRex = new Dog("Рекс");
+
         Cat[] cats = {
-                new Cat("Персик", 15),
-                new Cat("Барсик", 10),
-                new Cat("Ева", 20)
+                new Cat("Персик"),
+                new Cat("Барсик"),
+                new Cat("Ева")
         };
+
         Bowl bowl = new Bowl(30);
+
         System.out.println("Собаки:");
-        //коммент
         dogСhapa.run(400);
         dogСhapa.swim(15);
         dogRex.run(600);
         dogRex.swim(5);
+
         System.out.println("\nКоты:");
         for (Cat cat : cats) {
             int runDistance = (int)(Math.random() * 301);
@@ -24,12 +27,14 @@ public class Main {
             cat.swim(swimDistance);
         }
         System.out.println("\nВсего создано животных: " + Animal.getAnimalCount());
+        System.out.println("Из них:");
         System.out.println("  Собак: " + Dog.getDogCount());
         System.out.println("  Котов: " + Cat.getCatCount());
         System.out.println("\nЕды в миске: " + bowl.getFoodAmount());
+        int[] appetites = {15, 10, 20};
         System.out.println("\nПервое кормление:");
-        for (Cat cat : cats) {
-            cat.eat(bowl);
+        for (int i = 0; i < cats.length; i++) {
+            cats[i].eat(bowl, appetites[i]);
         }
         System.out.println("\nСостояние котов после первого кормления:");
         for (Cat cat : cats) {
@@ -38,8 +43,8 @@ public class Main {
         System.out.println();
         bowl.addFood(20);
         System.out.println();
-        for (Cat cat : cats) {
-            cat.eat(bowl);
+        for (int i = 0; i < cats.length; i++) {
+            cats[i].eat(bowl, appetites[i]);
         }
         System.out.println("\nФинальное состояние котов:");
         for (Cat cat : cats) {
