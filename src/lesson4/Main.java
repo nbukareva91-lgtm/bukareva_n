@@ -11,6 +11,7 @@ public class Main {
         };
         Bowl bowl = new Bowl(30);
         System.out.println("Собаки:");
+        //коммент
         dogСhapa.run(400);
         dogСhapa.swim(15);
         dogRex.run(600);
@@ -23,7 +24,6 @@ public class Main {
             cat.swim(swimDistance);
         }
         System.out.println("\nВсего создано животных: " + Animal.getAnimalCount());
-        System.out.println("Из них:");
         System.out.println("  Собак: " + Dog.getDogCount());
         System.out.println("  Котов: " + Cat.getCatCount());
         System.out.println("\nЕды в миске: " + bowl.getFoodAmount());
