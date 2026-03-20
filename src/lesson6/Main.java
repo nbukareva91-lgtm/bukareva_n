@@ -49,6 +49,7 @@ class Main {
         printStudents(students, 4);
 
         PhoneDirectory directory = new PhoneDirectory();
+        directory.add("Иванов", "+7 (913) 123 45 67");
         directory.add("Павлов", "+7 (913) 123 45 67");
         directory.add("Волков", "+7 (911) 456 78 90");
         directory.add("Павлов", "+7 (921) 678 90 12");
